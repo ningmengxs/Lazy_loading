@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>lazyload.js</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="content-wrap">
+            <div id="container">
+                <img class="lazy img-responsive" data-original="bmw_m1_hood.jpg" width="765" height="574"   style="display: block;">
+                <br>
+                <img class="lazy img-responsive" data-original="bmw_m1_side.jpg" width="765" height="574"  style="display: block;">
+                <br>
+                <img class="lazy img-responsive" data-original="viper_1.jpg" width="765" height="574"  style="display: block;">
+                <br>
+                <img class="lazy img-responsive" data-original="viper_corner.jpg" width="765" height="574" style="display: block;">
+                <br>
+                <img class="lazy img-responsive" data-original="bmw_m3_gt.jpg" width="765" height="574"  style="display: block;">
+                <br>
+                <img class="lazy img-responsive" data-original="corvette_pitstop.jpg" width="765" height="574"  style="display: block;">
+                <br>
+            </div>
+        </div>
+    </section>
+
+    <script src="jquery.js"></script>
+    <script src="jquery.lazyload.js"></script>
+    <script type="text/javascript">
+
+        $(function(){  
+        	 //基本写法
+        	$("img.lazy").lazyload();	
+        })
+
+        //$(function () {
+        	//淡入效果
+              //$("img.lazy").lazyload({
+                  //effect: "fadeIn"
+              //});
+        //});
+
+      //$(function(){ 
+      	//容器内垂直滚动效果
+      	//$("img.lazy").lazyload({         
+    		//effect : "fadeIn",
+    		//container: $("#container")
+	//});
+      //})
+
+      //$(function(){ 
+      	//页面内存在N多图片 (加载比较慢)
+      	//$("img.lazy").lazyload({
+  		//event: "scrollstop"
+	//});
+      //})
+       
+     //$(function(){ 
+           //  可见区域的下方图片不加载，经过5秒后，加载剩余的图片
+          // $(function() {
+    	      // $("img.lazy").lazyload({
+                             //event : "sporty"
+                     //});
+            //});
+          //$(window).bind("load", function() {
+                    //var timeout = setTimeout(function() { $("img.lazy").trigger("sporty") }, 5000);
+            //});      
+      //})
+      
+      //$(function(){ 
+      	//用AJAX来加载图片
+      	//$("#container").one("click", function() {
+     		//$("#container").load("images.html", function(response, status, xhr) {
+         		//$("img.lazy").lazyload();
+     	//});              
+           //});
+     // })
+    </script>
+  </body>
+  </html>
